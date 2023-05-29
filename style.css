@@ -1,0 +1,605 @@
+html
+{
+    font-size: 10px;
+}
+
+body
+{
+    margin: 0;
+    height: 100vh;
+}
+
+.error, .server-error
+{
+    color: red;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.server-error
+{
+    color: blue;
+}
+
+.footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8rem;
+    background-color: rgb(92, 181, 92);
+}
+
+.footer p
+{
+    font-size: 1.5rem;
+}
+
+.other-pages, .main-pages
+{
+    min-height: 63rem;
+    margin: 0;
+    background-image: url(./images/sfondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.other-pages a
+{
+    text-decoration: none;
+    color: rgb(19, 192, 45);
+}
+
+.other-pages a:visited
+{
+    color: rgb(19, 192, 45);
+}
+
+.other-pages a:hover
+{
+    color: blue;
+}
+
+.other-pages form
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: black 3px solid;
+    width: 30%;
+    border-radius: 2rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.173);
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.other-pages h1, .main-pages h1
+{
+    font-size: 3rem;
+    margin: 0;
+    padding: 2rem;
+    color: white;
+}
+
+.other-pages input, .main-pages input, .insert input, .insert .submit, .combo select, .delete, .submit-review
+{
+    box-sizing: border-box;
+    width: 70%;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    background-color: #f8f8f8;
+}
+
+.other-pages p
+{
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+.other-pages .submit, .main-pages .submit, .insert .submit, .delete, .submit-review
+{
+    background-color: rgb(14, 133, 32);
+    width: 20%;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.insert form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(92, 181, 92);
+    height: 8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.insert-form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.bar, .bar-review
+{
+    height: 1px;
+    background-color: black;
+}
+
+.bar
+{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.insert input
+{
+    width: 80%;
+}
+
+.inputs
+{
+    width: 80%;
+}
+
+#message, .review-content
+{
+    box-sizing: border-box;
+    resize: none;
+    height: 15rem;
+    padding: 1.2em 2rem;
+    width: 70%;
+    border: 2px solid #ccc;
+    border-radius: 0.4rem;
+    background-color: #f8f8f8;
+    margin-bottom: 1rem;
+}
+
+.hamburger
+{
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger div
+{
+    background-color: black;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+}
+
+.navbar
+{
+    height: 8rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a
+{
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: rgb(165, 178, 165);
+    border-radius: 2rem;
+    margin-left: 1rem;
+}
+
+.no-scroll
+{
+    overflow: hidden;
+}
+
+.overlay
+{
+    background-color: rgba(0, 0, 0, 0.4);
+    min-height: inherit;
+    position: relative;
+}
+
+.main-pages form, .insert form
+{
+    text-align: center;
+}
+
+.main-pages h1
+{
+    padding-top: 10rem;
+}
+
+.main-pages input 
+{
+    width: 30%;
+}
+
+.main-pages p
+{
+    font-size: 2rem;
+}
+
+#modal
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color:  rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal.hidden, #upload, .hidden
+{
+    display: none;
+}
+
+#modal img
+{
+    width: 60%;
+    height: 60%;
+}
+
+.combo input
+{
+    width: 55%;
+}
+
+.combo select
+{
+    width: 25%;
+}
+
+.restaurant
+{
+    width: calc((100% - 6rem) / 3);
+    height: 68rem;
+    background-color: lightgray;
+    margin: 1rem;
+    position: relative;
+}
+
+.restaurant .favorites
+{
+    
+    width: 5rem;
+    height: 5rem;
+    margin-left: -5rem;
+}
+
+.restaurant img
+{
+    width: 80%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.restaurant .img-container
+{
+    height: 40%;
+    margin-bottom: 1rem;
+}
+
+.restaurant p
+{
+    font-size: 1.5rem;
+}
+
+.results
+{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem 10%;
+}
+
+.restaurant .start-upload
+{
+    display: block;
+    margin: auto;
+}
+
+.reviews
+{
+    overflow-y: scroll;
+    width: 60%;
+    height: 20rem;
+    background-color: white;
+    padding-bottom: 2rem;
+}
+
+.reviews-container
+{
+    background-color: white;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.review-rating
+{
+    width: 20%;
+    margin-bottom: 2rem;
+    margin-left: -49%;
+}
+
+.delete, .insert .submit
+{
+    position: absolute;
+    top: 96%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-pages .submit
+{
+    width: 8%;
+    margin-bottom: 1rem;
+}
+
+.title
+{
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+}
+
+#upper-title
+{
+    margin-top: 4rem;
+}
+
+.welcome-personal_area, .start-page
+{
+    text-align: center;
+    color: white;
+    width: 55%;
+    margin-left: 10%;
+}
+
+.welcome-personal_area
+{
+    padding-top: 10%;
+}
+
+.space
+{
+    height: 8rem;
+}
+
+.pointer
+{
+    cursor: pointer;
+}
+
+@media (max-width: 1100px)
+{
+    .insert .submit, .delete
+    {
+        width: 30%;
+    }
+}
+
+@media (max-width: 1000px)
+{
+    .restaurant 
+    {
+        width: calc((100% - 6rem) / 2);
+    }
+}
+
+@media (max-width: 900px)
+{
+    .other-pages .submit 
+    {
+        width: 30%;
+    }
+
+    .restaurant 
+    {
+        width: calc((100% - 6rem) / 2);
+    }
+}
+
+
+@media (max-width: 600px)
+{
+    html
+    {
+        font-size: 8px;
+    }
+
+    .main-pages .submit 
+    {
+        width: 12%;
+    }
+
+    .other-pages form 
+    {
+        width: 45%;
+    }
+
+    .restaurant 
+    {
+        width: 100%;
+    }
+
+    .restaurant h1
+    {
+        height: 4.5rem;
+    }
+
+    .insert input, .delete
+    {
+        height: 3.6rem;
+    }
+
+    .insert .submit, .delete
+    {
+        width: 20%;
+    }
+
+    .hamburger
+    {
+        display: block;
+    }
+
+    .navbar
+    {
+        position: fixed;
+        left: -100%;
+        top: 8rem;
+        flex-direction: column;
+        background-color: rgb(92, 181, 92);
+        width: 100%;
+        text-align: center;
+        z-index: 100;
+    }
+
+    .navbar a
+    {
+        margin: 1rem 0;
+    }
+
+    .navbar.active
+    {
+        left: 0;
+        height: 23rem;
+    }
+
+    .hamburger.active div:nth-child(2)
+    {
+        opacity: 0;
+    }
+    .hamburger.active div:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active div:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 450px)
+{
+    .main-pages .submit 
+    {
+        width: 15%;
+    }
+
+    .other-pages form 
+    {
+        width: 60%;
+    }
+}
+
+@media (min-height: 653px)
+{
+    .other-pages, .main-pages 
+    {
+        min-height: 65.6rem;
+    }
+}
+
+@media (min-height: 667px)
+{
+    .other-pages, .main-pages 
+    {
+        min-height: 67.4rem;
+    }
+}
+
+@media (min-height: 720px)
+{
+    .other-pages, .main-pages 
+    {
+        min-height: 74rem;
+    }
+}
+
+@media (min-height: 740px)
+{
+    .other-pages, .main-pages 
+    {
+        min-height: 76.5rem;
+    }
+}
+
+@media (min-height: 844px)
+{
+    .other-pages, .main-pages 
+    {
+        min-height: 89.5rem;
+    }
+}
+
+@media (min-height: 851px)
+{
+    .other-pages, .main-pages 
+    {
+        min-height: 90.4rem;
+    }
+}
+
+@media (min-height: 896px)
+{
+    .other-pages, .main-pages 
+    {
+        min-height: 96rem;
+    }
+}
+
+@media (min-height: 914px)
+{
+    .other-pages, .main-pages 
+    {
+        min-height: 98.4rem;
+    }
+}
+
+@media (min-height: 1180px)
+{
+    .other-pages, .main-pages 
+    {
+        min-height: 102rem;
+    }
+}
+
+@media (min-height: 1368px)
+{
+    .other-pages, .main-pages 
+    {
+        min-height: 120.8rem;
+    }
+}
+
+
+
+
+
+
